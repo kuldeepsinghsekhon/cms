@@ -23,18 +23,14 @@ public class User implements Serializable {
 
 	private String password;
 
-	//bi-directional many-to-one association to Comment
-	@OneToMany(mappedBy="user")
-	private List<Comment> comments;
+	
 
 	//bi-directional many-to-one association to Post
 	@OneToMany(mappedBy="user")
 	private List<Post> posts;
 
 	//bi-directional many-to-one association to UserDetail
-	@OneToOne
-	@JoinColumn(name="user_detail_id")
-	private UserDetail userDetail;
+	
 
 	public User() {
 	}
@@ -71,27 +67,7 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public List<Comment> getComments() {
-		return this.comments;
-	}
-
-	public void setComments(List<Comment> comments) {
-		this.comments = comments;
-	}
-
-	public Comment addComment(Comment comment) {
-		getComments().add(comment);
-		comment.setUser(this);
-
-		return comment;
-	}
-
-	public Comment removeComment(Comment comment) {
-		getComments().remove(comment);
-		comment.setUser(null);
-
-		return comment;
-	}
+	
 
 	public List<Post> getPosts() {
 		return this.posts;
@@ -115,12 +91,6 @@ public class User implements Serializable {
 		return post;
 	}
 
-	public UserDetail getUserDetail() {
-		return this.userDetail;
-	}
-
-	public void setUserDetail(UserDetail userDetail) {
-		this.userDetail = userDetail;
-	}
+	
 
 }

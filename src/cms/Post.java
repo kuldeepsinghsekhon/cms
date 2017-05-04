@@ -35,10 +35,8 @@ public class Post implements Serializable {
 	@Column(name="short_detail")
 	private String shortDetail;
 
-	//bi-directional many-to-one association to Comment
-	@OneToMany(mappedBy="post")
-	private List<Comment> comments;
-
+	
+	
 	//bi-directional many-to-one association to Category
 	@ManyToOne
 	@JoinColumn(name="cat_id")
@@ -107,27 +105,7 @@ public class Post implements Serializable {
 		this.shortDetail = shortDetail;
 	}
 
-	public List<Comment> getComments() {
-		return this.comments;
-	}
-
-	public void setComments(List<Comment> comments) {
-		this.comments = comments;
-	}
-
-	public Comment addComment(Comment comment) {
-		getComments().add(comment);
-		comment.setPost(this);
-
-		return comment;
-	}
-
-	public Comment removeComment(Comment comment) {
-		getComments().remove(comment);
-		comment.setPost(null);
-
-		return comment;
-	}
+	
 
 	public Category getCategory() {
 		return this.category;

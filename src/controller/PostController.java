@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import cms.Category;
 import cms.Post;
-import cms.PostService;
+import services.Service;
 
 /**
  * Servlet implementation class PostController
@@ -19,7 +19,7 @@ import cms.PostService;
 @WebServlet("/admin/posts")
 public class PostController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	PostService postService= new PostService();
+	Service postService= new Service();
     /**
      * @see HttpServlet#HttpServlet()
      */

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import cms.Category;
 import cms.Menu;
 import cms.Post;
-import cms.PostService;
+import services.Service;
 
 /**
  * Servlet implementation class Category
@@ -20,7 +20,7 @@ import cms.PostService;
 @WebServlet("/page")
 public class PageController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	PostService postService= new PostService();
+	Service postService= new Service();
    
     /**
      * @see HttpServlet#HttpServlet()

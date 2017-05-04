@@ -1,4 +1,4 @@
-package cms;
+package services;
 
 import java.util.Date;
 import java.util.List;
@@ -9,9 +9,14 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import cms.Category;
+import cms.Menu;
+import cms.Post;
+import cms.User;
 
 
-public class PostService {
+
+public class Service {
 
 	public boolean addCategory(Category category){
 		try{
