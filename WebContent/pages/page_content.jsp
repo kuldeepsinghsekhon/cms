@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <section id="contentSection">
     <div class="row">
       <div class="col-lg-8 col-md-8 col-sm-8">
@@ -7,8 +7,8 @@
            
             <h1><c:out value="${post.name}"></c:out></h1>
             <div class="post_commentbox"> <a href="#"><i class="fa fa-user"></i>Wpfreeware</a> <span><i class="fa fa-calendar"></i>6:49 AM</span> <a href="#"><i class="fa fa-tags"></i>Technology</a> </div>
-            <div class="single_page_content"> <img class="img-center" src="../images/single_post_img.jpg" alt="">
-              <p><c:out  escapeXml="false" value="${post.detail}"></c:out>
+            <div class="single_page_content">
+              <p><c:out  escapeXml="false"   value="${post.detail}"></c:out>
               
             </div>
             <div class="social_link">

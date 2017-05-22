@@ -43,7 +43,7 @@ public class IndexController extends HttpServlet {
 		List <Menu> menus= postService.allMenu(); 
 		request.setAttribute("menus",menus);
 		request.setAttribute("categories", categories);
-		request.getRequestDispatcher("//pages//index.jsp").forward(request, response);
+		request.getRequestDispatcher("\\pages\\index.jsp").forward(request, response);
 	}
 
 	/**

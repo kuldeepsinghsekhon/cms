@@ -30,7 +30,7 @@
 <%@include file="header.jsp" %>
 <%@include file="navarea.jsp" %>
  
- <%@include file="slider.jsp" %>
+
  <%@include file="main_content.jsp" %>
   <%@include file="footer.jsp" %>
 </div>
